@@ -33,7 +33,7 @@
             </div>
 
             <footer class="flex justify-between items-center mt-8">
-                <a href="/authors/{{ $post->author->username }}">
+                <a href="/?author={{ $post->author->username }}">
                     <div class="flex items-center text-sm">
                         <img src="/images/lary-avatar.svg" alt="Lary avatar">
                         <div class="ml-3">
