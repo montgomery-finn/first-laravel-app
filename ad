@@ -1,0 +1,32 @@
+=> [34;4mIlluminate\Database\Eloquent\Collection[39;24m {#4875
+     [34mall[39m: [
+       [34;4mApp\Models\Category[39;24m {#4873
+         [34mid[39m: [35m7[39m,
+       },
+       [34;4mApp\Models\Category[39;24m {#4872
+         [34mid[39m: [35m5[39m,
+       },
+       [34;4mApp\Models\Category[39;24m {#4871
+         [34mid[39m: [35m6[39m,
+       },
+       [34;4mApp\Models\Category[39;24m {#4870
+         [34mid[39m: [35m9[39m,
+       },
+       [34;4mApp\Models\Category[39;24m {#4869
+         [34mid[39m: [35m3[39m,
+       },
+       [34;4mApp\Models\Category[39;24m {#4868
+         [34mid[39m: [35m1[39m,
+       },
+       [34;4mApp\Models\Category[39;24m {#4867
+         [34mid[39m: [35m8[39m,
+       },
+       [34;4mApp\Models\Category[39;24m {#4866
+         [34mid[39m: [35m4[39m,
+       },
+       [34;4mApp\Models\Category[39;24m {#4865
+         [34mid[39m: [35m2[39m,
+       },
+     ],
+   }
+

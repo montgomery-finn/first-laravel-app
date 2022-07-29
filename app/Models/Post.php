@@ -26,4 +26,18 @@ class Post extends Model
     public function author(){
         return $this->belongsTo(User::class, 'user_id');
     }
+
+    public function scopeFilter($query, $filters){
+
+        $query->when($filters['search'] ?? false, fn($query, $search) =>
+                $query
+                    ->where('title', 'like', '%' . $search . '%')
+                    ->orWhere('body', 'like', '%' . $search . '%'));
+
+        $query->when($filters['category'] ?? false, fn($query, $category) =>
+                $query
+                    ->whereHas('category', fn($query) =>
+                        $query->where('slug', $category)));
+        
+    }
 }
