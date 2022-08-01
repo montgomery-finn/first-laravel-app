@@ -18,7 +18,12 @@
                         type="text"
                         name="name"
                         id="name"
+                        value="{{ old('name') }}"
                         required>
+
+                    @error('name')
+                        <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
                 <div class="mb-6">
                     <label
@@ -32,7 +37,12 @@
                         type="text"
                         name="username"
                         id="username"
+                        value="{{ old('username') }}"
                         required>
+
+                    @error('username')
+                        <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
                 <div class="mb-6">
                     <label
@@ -46,7 +56,12 @@
                         type="email"
                         name="email"
                         id="email"
+                        value="{{ old('email') }}"
                         required>
+
+                    @error('email')
+                        <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
                 <div class="mb-6">
                     <label
@@ -61,6 +76,10 @@
                         name="password"
                         id="password"
                         required>
+
+                    @error('password')
+                        <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <div class="mb-6">
@@ -69,6 +88,15 @@
                         class="border border-gray-400 p-2 w-full"
                         type="submit">
                 </div>
+
+                {{-- Mostrar todos os erros no fim da página:
+                @if($errors->any())
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li class="text-red-500 text-xs">{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                @endif --}}
             </form>
         </main>
     </section>
