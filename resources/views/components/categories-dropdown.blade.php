@@ -10,7 +10,7 @@
 
   <x-dropdown-item 
       :active="!request('category')"
-      href="/" >
+      href="/?{{ http_build_query(request()->except('category', 'page')) }}" >
       
       All
   
@@ -19,7 +19,7 @@
   @foreach ($categories as $category)
       <x-dropdown-item 
           :active="request('category') == $category->slug"
-          href="/?category={{ $category->slug }}&{{ http_build_query(request()->except('category')) }}" >
+          href="/?category={{ $category->slug }}&{{ http_build_query(request()->except('category', 'page')) }}" >
           {{ $category->name }}
       </x-dropdown-item>
   @endforeach

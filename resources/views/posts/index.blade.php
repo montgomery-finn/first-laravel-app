@@ -6,6 +6,8 @@
        
         @if ($posts->count())
             <x-posts-grid :posts="$posts" class="absolute pointer-events-none"/>
+        
+            {{ $posts->links() }}
         @endif
     </main>
 </x-layout>
