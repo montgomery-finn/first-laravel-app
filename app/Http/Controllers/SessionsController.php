@@ -30,4 +30,10 @@ class SessionsController extends Controller
         //     'email' => 'The provided credentials could not be verified.'
         // ]);
     }
+
+    public function destroy(){
+        auth()->logout();
+
+        return redirect('/')->with('success', 'Goodbye!');
+    }
 }
