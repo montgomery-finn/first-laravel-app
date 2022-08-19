@@ -8,7 +8,7 @@ use Illuminate\Validation\ValidationException;
 class SessionsController extends Controller
 {
     public function create(){
-        return view('seesions:create');
+        return view('sessions/create');
     }
 
     public function store(){
@@ -23,7 +23,9 @@ class SessionsController extends Controller
             return redirect('/')->with(['success' => 'Welcome back!']);
         }
 
-        return back()->withErrors(['email' => 'The provided credentials could not be verified.']);
+        return back()
+            ->withInput()
+            ->withErrors(['email' => 'The provided credentials could not be verified.']);
 
         // equivalente:
         // throw ValidationException::withMessages([

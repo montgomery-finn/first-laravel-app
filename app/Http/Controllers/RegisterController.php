@@ -20,7 +20,8 @@ class RegisterController extends Controller
             'password' => ['required', 'min:7', 'max:255']
         ]);
 
-        $attributes['password'] = bcrypt($attributes['password']);
+        //essa linha não precisa pq tá usando um mutator dentro da classe user
+        //$attributes['password'] = bcrypt($attributes['password']);
 
         $user = User::create($attributes);
 
