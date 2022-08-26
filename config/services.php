@@ -18,7 +18,6 @@ return [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
         'endpoint' => env('MAILGUN_ENDPOINT', 'api.mailgun.net'),
-        'scheme' => 'https',
     ],
 
     'postmark' => [
@@ -34,7 +33,7 @@ return [
     'mailchimp' => [
         'key' => env('MAILCHIMP_KEY'),
         'lists' => [
-            'subscribers' => '2ddfc58172'
+            'subscribers' => env('MAILCHIMP_LIST_SUBSCRIBERS')
         ]
     ]
 ];
